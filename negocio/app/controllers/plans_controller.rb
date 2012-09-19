@@ -7,6 +7,7 @@ class PlansController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @plans }
+	  format.xml { render xml: @plans }
     end
   end
 

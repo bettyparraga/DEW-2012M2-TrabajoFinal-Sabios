@@ -1,0 +1,57 @@
+<%= form_for(@plan) do |f| %>
+  <%= if @plan.errors.any? %>
+  <div id="error_explation">
+	<h2><%= pluralize(@plan.errors.count, "error") %> prohibited this plan from being saved:</h2>
+	
+	<u1>
+	<%= @plan.errors.full_messages.each do |msg| %>
+	  <li><%= msg %></li>
+	  <% end %>
+	  </u1>
+	  </div>
+  <% end %>
+  
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :category %><br />
+    <%= f.text_field :category %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :vision %><br />
+    <%= f.text_field :vision %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :reasoning %><br />
+    <%= f.text_field :reasoning %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :time %><br />
+    <%= f.text_field :time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :total_investment %><br />
+    <%= f.text_field :total_investment %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :net_margin %><br />
+    <%= f.text_field :net_margin %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :roi %><br />
+    <%= f.text_field :roi %>
+  </div>
+  
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
