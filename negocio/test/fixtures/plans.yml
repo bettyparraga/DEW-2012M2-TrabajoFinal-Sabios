@@ -2,20 +2,28 @@
 
 one:
   title: MyString
-  category: MyString
   vision: MyText
   reasoning: MyText
-  time: 1
-  total_investment: 1.5
-  net_margin: 1.5
-  roi: 1.5
+  time_month: 1
+  total_investment: 1
+  net_margin: 1
+  roi: 1
+  path_file_plan: MyString
+  price_file: 1
+  viable: MyString
+  sabio: 
+  category: 
 
 two:
   title: MyString
-  category: MyString
   vision: MyText
   reasoning: MyText
-  time: 1
-  total_investment: 1.5
-  net_margin: 1.5
-  roi: 1.5
+  time_month: 1
+  total_investment: 1
+  net_margin: 1
+  roi: 1
+  path_file_plan: MyString
+  price_file: 1
+  viable: MyString
+  sabio: 
+  category: 

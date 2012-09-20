@@ -1,57 +1,67 @@
 <%= form_for(@plan) do |f| %>
-  <%= if @plan.errors.any? %>
-  <div id="error_explation">
-	<h2><%= pluralize(@plan.errors.count, "error") %> prohibited this plan from being saved:</h2>
-	
-	<u1>
-	<%= @plan.errors.full_messages.each do |msg| %>
-	  <li><%= msg %></li>
-	  <% end %>
-	  </u1>
-	  </div>
+  <% if @plan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@plan.errors.count, "error") %> prohibited this plan from being saved:</h2>
+
+      <ul>
+      <% @plan.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
   <% end %>
-  
+
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label "Titulo del Plan de Negocio" %><br />
     <%= f.text_field :title %>
   </div>
   
   <div class="field">
-    <%= f.label :category %><br />
-    <%= f.text_field :category %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :vision %><br />
-    <%= f.text_field :vision %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :reasoning %><br />
-    <%= f.text_field :reasoning %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :time %><br />
-    <%= f.text_field :time %>
+    <%= f.label "Categoría" %><br />
+    <%= f.collection_select :category_id, Category.all, :id, :name, :prompt => true %>
   </div>
 
   <div class="field">
-    <%= f.label :total_investment %><br />
-    <%= f.text_field :total_investment %>
+    <%= f.label "Visión" %><br />
+    <%= f.text_area :vision %>
   </div>
-  
   <div class="field">
-    <%= f.label :net_margin %><br />
-    <%= f.text_field :net_margin %>
+    <%= f.label "Razonamiento" %><br />
+    <%= f.text_area :reasoning %>
   </div>
-  
   <div class="field">
-    <%= f.label :roi %><br />
-    <%= f.text_field :roi %>
+    <%= f.label "Tiempo de Ejecución en Meses" %><br />
+    <%= f.number_field :time_month %>
   </div>
-  
+  <div class="field">
+    <%= f.label "Inversión Total" %><br />
+    <%= f.number_field :total_investment %>
+  </div>
+  <div class="field">
+    <%= f.label "Margen Neto" %><br />
+    <%= f.number_field :net_margin %>
+  </div>
+  <div class="field">
+    <%= f.label "R.O.I." %><br />
+    <%= f.number_field :roi %>
+  </div>
+  <div class="field">
+    <%= f.label "Ruta de descarga de archivo del Plan de Negocio" %><br />
+    <%= f.text_field :path_file_plan %>
+  </div>
+  <div class="field">
+    <%= f.label "Precio de Venta" %><br />
+    <%= f.number_field :price_file %>
+  </div>
+  <div class="field">
+    <%= f.label "Es Viable" %><br />
+    <%= f.text_field :viable %>
+  </div>
+  <div class="field">
+    <%= f.label "Sabio" %><br />
+    <%= f.collection_select :sabio_id, Sabio.all, :id, :name, :prompt => true %>
+  </div>
   <div class="actions">
-    <%= f.button :submit %>
+    <%= f.submit %>
   </div>
 <% end %>

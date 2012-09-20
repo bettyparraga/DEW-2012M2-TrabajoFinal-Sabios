@@ -11,16 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120919031739) do
+ActiveRecord::Schema.define(:version => 20120919211300) do
 
-  create_table "customer_plans", :force => true do |t|
-    t.string   "user_plan"
-    t.string   "plan_title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "customers", :force => true do |t|
+  create_table "categories", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -28,13 +21,26 @@ ActiveRecord::Schema.define(:version => 20120919031739) do
 
   create_table "plans", :force => true do |t|
     t.string   "title"
-    t.string   "category"
     t.text     "vision"
     t.text     "reasoning"
-    t.integer  "time"
-    t.float    "total_investment"
-    t.float    "net_margin"
-    t.float    "roi"
+    t.integer  "time_month"
+    t.integer  "total_investment"
+    t.integer  "net_margin"
+    t.integer  "roi"
+    t.string   "path_file_plan"
+    t.integer  "price_file"
+    t.string   "viable"
+    t.integer  "sabio_id"
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "plans", ["category_id"], :name => "index_plans_on_category_id"
+  add_index "plans", ["sabio_id"], :name => "index_plans_on_sabio_id"
+
+  create_table "sabios", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

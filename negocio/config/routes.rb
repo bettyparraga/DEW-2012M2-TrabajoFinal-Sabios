@@ -1,9 +1,9 @@
 Negocio::Application.routes.draw do
-  resources :customer_plans
-
-  resources :customers
-
   resources :plans
+
+  resources :categories
+
+  resources :sabios
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

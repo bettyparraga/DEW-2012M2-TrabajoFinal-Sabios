@@ -7,7 +7,6 @@ class PlansController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @plans }
-	  format.xml { render xml: @plans }
     end
   end
 
@@ -26,7 +25,6 @@ class PlansController < ApplicationController
   # GET /plans/new.json
   def new
     @plan = Plan.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @plan }
@@ -45,11 +43,12 @@ class PlansController < ApplicationController
 
     respond_to do |format|
       if @plan.save
-        format.html { redirect_to @plan, notice: 'Plan was successfully created.' }
+        format.html { redirect_to @plan, notice: 'El Plan de Negocio ha sido creado exitosamente.' }
         format.json { render json: @plan, status: :created, location: @plan }
       else
         format.html { render action: "new" }
         format.json { render json: @plan.errors, status: :unprocessable_entity }
+		    #render :new
       end
     end
   end
@@ -61,9 +60,10 @@ class PlansController < ApplicationController
 
     respond_to do |format|
       if @plan.update_attributes(params[:plan])
-        format.html { redirect_to @plan, notice: 'Plan was successfully updated.' }
+        format.html { redirect_to @plan, notice: 'El plan ha sido actualizado exitosamente.' }
         format.json { head :ok }
       else
+		    #render :edit
         format.html { render action: "edit" }
         format.json { render json: @plan.errors, status: :unprocessable_entity }
       end

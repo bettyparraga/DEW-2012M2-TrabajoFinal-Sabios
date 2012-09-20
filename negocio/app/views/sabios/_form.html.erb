@@ -1,0 +1,21 @@
+<%= form_for(@sabio) do |f| %>
+  <% if @sabio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sabio.errors.count, "error") %> prohibited this sabio from being saved:</h2>
+
+      <ul>
+      <% @sabio.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
