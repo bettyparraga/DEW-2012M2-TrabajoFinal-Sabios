@@ -8,5 +8,6 @@ class Emprendedor < ActiveRecord::Base
   validates_presence_of  :direccion, :message => "^Debe ingresar una direccion"
   validates_presence_of  :fecha_nacimiento, :message => "^Debe ingresar la fecha de nacimiento"
   validates_presence_of  :numero_documento, :message => "^Debe ingresar un numero de documento de identidad"
+  validates_uniqueness_of :numero_documento, :message => "^ Numero de documento ya existe"
 
 end
