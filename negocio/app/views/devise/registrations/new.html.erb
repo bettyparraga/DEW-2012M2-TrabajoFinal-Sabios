@@ -1,0 +1,24 @@
+<h2>Registrar nuevo usuario</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label "Correo electrónico" %><br />
+  <%= f.email_field :email %></div>
+
+  <div><%= f.label "Contraseña" %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label "Confirmar contraseña" %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.label "Tipo de usuario" %><br />
+
+<%= f.label "Sabio" %>      <%= f.radio_button :role, "SABIO" %>
+<%= f.label "Emprendedor" %><%= f.radio_button :role, "EMPRENDEDOR" %>
+</div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>
