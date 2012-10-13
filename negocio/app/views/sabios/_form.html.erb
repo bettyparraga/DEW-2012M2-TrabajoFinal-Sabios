@@ -1,0 +1,85 @@
+<%= form_for(@sabio) do |f| %>
+  <% if @sabio.errors.any? %>
+    <div id="error_explanation">
+      <h2> Se han presentado los siguientes errores </h2>
+
+      <ul>
+      <% @sabio.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombres %><br />
+    <%= f.text_field :nombres %>
+  </div>
+  <div class="field">
+    <%= f.label "Apellido Paterno" %><br />
+    <%= f.text_field :paterno %>
+  </div>
+  <div class="field">
+    <%= f.label "Apellido Materno" %><br />
+    <%= f.text_field :materno %>
+  </div>
+   <div class="field">
+    <%= f.label "Sexo" %><br />
+    <%= f.label "femenino" %> <%= f.radio_button :sexo, "FEMENINO" %>
+    <%= f.label "masculino" %>
+    <%= f.radio_button :sexo, "SEXO" %>
+  </div>
+    <div class="field">
+    <%= f.label "Tipo Documento identidad" %><br />
+    <%= f.label "dni" %> <%= f.radio_button :tipo_docum_identidad, "DNI" %>
+    <%= f.label "carné extranjeria" %>
+    <%= f.radio_button :tipo_docum_identidad, "CARNÉ EXTRANJERIA" %>
+    </div>
+
+    <div class="field">
+    <%= f.label "Número Documento identidad" %><br />
+    <%= f.text_field :numero_documento %>
+  </div>
+
+  <div class="field">
+    <%= f.label :celular %><br />
+    <%= f.text_field :celular %>
+  </div>
+  <div class="field">
+    <%= f.label "Dirección" %><br />
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="field">
+    <%= f.label "Fecha Nacimiento" %><br />
+    <%= f.date_select :fecha_nacimiento, start_year: 1960%>
+  </div>
+  <div class="field">
+    <%= f.label "Apelativo" %><br />
+    <%= f.text_field :apelativo %>
+  </div>
+  <div class="field">
+    <%= f.label "Resumen Biografico" %><br />
+    <%= f.text_area :resumen_biografico %>
+  </div>
+  <div class="field">
+    <%= f.label "Sitio WEB" %><br />
+    <%= f.text_field :sitio_web %>
+  </div>
+  <div class="field">
+    <%= f.label "Entidad de la cuenta bancaria" %><br />
+    <%= f.label "Continental" %> 
+    <%= f.radio_button :banco_cta_bancaria, "CONTINENTAL" %>
+    <%= f.label "interbank" %>
+    <%= f.radio_button :banco_cta_bancaria, "INTERBANK" %>
+    <%= f.label "Credito" %> 
+    <%= f.radio_button :banco_cta_bancaria, "CREDITO" %>
+   
+  </div>
+  <div class="field">
+    <%= f.label "Número cuenta Bancaria" %><br />
+    <%= f.text_field :numero_cta_bancaria %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

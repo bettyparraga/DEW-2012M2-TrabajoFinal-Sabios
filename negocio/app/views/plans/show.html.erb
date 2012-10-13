@@ -1,0 +1,62 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Título del Plan de Negocio:</b>
+  <%= @plan.title %>
+</p>
+<p>
+  <b>Categoria:</b>
+  <%= @plan.category.name %>
+</p>
+<p>
+  <b>Vision:</b>
+  <%= @plan.vision %>
+</p>
+
+<p>
+  <b>Razonamiento:</b>
+  <%= @plan.reasoning %>
+</p>
+
+<p>
+  <b>Tiempo de ejecución en meses:</b>
+  <%= @plan.time_month %>
+</p>
+
+<p>
+  <b>Inversión Total:</b>
+  <%= @plan.total_investment %>
+</p>
+
+<p>
+  <b>Margen Neto:</b>
+  <%= @plan.net_margin %>
+</p>
+
+<p>
+  <b>ROI:</b>
+  <%= @plan.roi %>
+</p>
+
+<p>
+  <b>Ruta de descarga de archivo del Plan de Negocio:</b>
+  <%= @plan.path_file_plan %>
+</p>
+
+<p>
+  <b>Precio de Archivo:</b>
+  <%= @plan.price_file %>
+</p>
+
+<p>
+  <b>Es Viable:</b>
+  <%= @plan.viable %>
+</p>
+<p>
+  <b>Nombre de Sabio:</b>
+  <%= @plan.sabio.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_plan_path(@plan) %> |
+<%= link_to 'Back', plans_path %>

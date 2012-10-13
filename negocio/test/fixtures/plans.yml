@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  vision: MyText
+  reasoning: MyText
+  time_month: 1
+  total_investment: 1
+  net_margin: 1
+  roi: 1
+  path_file_plan: MyString
+  price_file: 1
+  viable: MyString
+  sabio: 
+  category: 
+
+two:
+  title: MyString
+  vision: MyText
+  reasoning: MyText
+  time_month: 1
+  total_investment: 1
+  net_margin: 1
+  roi: 1
+  path_file_plan: MyString
+  price_file: 1
+  viable: MyString
+  sabio: 
+  category: 

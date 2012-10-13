@@ -1,0 +1,60 @@
+<%= form_for(@emprendedor) do |f| %>
+  <% if @emprendedor.errors.any? %>
+    <div id="error_explanation">
+      <h2>Se han presentado los siguientes errores </h2>
+
+      <ul>
+      <% @emprendedor.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Nombres" %><br />
+    <%= f.text_field :nombres %>
+  </div>
+  <div class="field">
+    <%= f.label "Apellido Paterno" %><br />
+    <%= f.text_field :paterno %>
+  </div>
+  <div class="field">
+    <%= f.label "Apellido Materno" %><br />
+    <%= f.text_field :materno %>
+  </div>
+  <div class="field">
+    <%= f.label "Sexo" %><br />
+    <%= f.label "femenino" %> <%= f.radio_button :sexo, "FEMENINO" %>
+    <%= f.label "masculino" %>
+    <%= f.radio_button :sexo, "SEXO" %>
+  </div>
+  </div>
+  <div class="field">
+    <%= f.label "Tipo documento de identidad" %><br />
+     <%= f.label "dni" %> <%= f.radio_button :tipo_docum_identidad, "DNI" %>
+    <%= f.label "carné extranjeria" %>
+    <%= f.radio_button :tipo_docum_identidad, "CARNÉ EXTRANJERIA" %>
+  </div>
+  
+    <div class="field">
+    <%= f.label "Número Documento identidad" %><br />
+    <%= f.text_field :numero_documento %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Número de celular" %><br />
+    <%= f.text_field :celular %>
+  </div>
+  <div class="field">
+    <%= f.label "Dirección" %><br />
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="field">
+    <%= f.label "Fecha de nacimiento" %><br />
+    <%= f.date_select :fecha_nacimiento, :start_year => 1960 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

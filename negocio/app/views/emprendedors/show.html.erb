@@ -1,0 +1,45 @@
+<h3 id="notice"><%= notice %></h3>
+
+<p>
+  <b>Nombres:</b>
+  <%= @emprendedor.nombres %>
+</p>
+
+<p>
+  <b>Paterno:</b>
+  <%= @emprendedor.paterno %>
+</p>
+
+<p>
+  <b>Materno:</b>
+  <%= @emprendedor.materno %>
+</p>
+
+<p>
+  <b>Sexo:</b>
+  <%= @emprendedor.sexo %>
+</p>
+
+<p>
+  <b>Tipo docum identidad:</b>
+  <%= @emprendedor.tipo_docum_identidad %>
+</p>
+
+<p>
+  <b>Celular:</b>
+  <%= @emprendedor.celular %>
+</p>
+
+<p>
+  <b>Direccion:</b>
+  <%= @emprendedor.direccion %>
+</p>
+
+<p>
+  <b>Fecha nacimiento:</b>
+  <%= @emprendedor.fecha_nacimiento %>
+</p>
+
+
+<%= link_to 'Edit', edit_emprendedor_path(@emprendedor) %> |
+<%= link_to 'Back', emprendedors_path %>
