@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Negocio</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<title>Deviseok</title>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<div id="contenido">
+		<div id="cabecera" style='height:120px; background-color: #81D9B6;'>
+			<div id="logo" >
+				<a href="/"><%= image_tag "logo.gif", :size => "100x100" %></a><b>EmprendeNegocio</b>
+			</div>
+			<div id="login">
+				<% if user_signed_in? %>
+					<br><br>
+						<b><%= current_user.role%></b>
+					<br>
+						<%= current_user.email %>
+					<br><br>
+					<%= link_to "Cerrar sesión", destroy_user_session_path, :method => :delete %>
+					<br>
+					<br><br>
+				<% else %>
+					<br><br><%= link_to "Crear usuario", new_user_registration_path %> <br>o<br><%= link_to "Inicie sesión", new_user_session_path %>
+					<br><br><br><br>
+				<% end %>
+			</div>
+		</div>
+		<% if user_signed_in? %>
+			<% if current_user.role == 'ADMINISTRADOR'%>
+				<div id="menu_admin">
+					<%= link_to "Administrar Planes de negocio", plans_path %> / 
+					<%= link_to "Gestionar Sabios", sabios_path %> / 
+					<%= link_to "Gestionar Emprendedores", emprendedors_path %>	
+				</div>
+			<% end %>
+			<% if current_user.role == 'SABIO'%>
+				<div id="menu_sabio">
+					<%= link_to "Gestionar mi planes de negocio", plans_path %>	
+				</div>
+			<% end %>
+			<% if current_user.role == 'EMPRENDEDOR'%>
+				<div id="menu_empre">
+					<%= link_to "Planes de negocio", plans_path %>	
+				</div>
+			<% end %>
+		<% end %>
+		<div id="info" style='height:100%; background-color: #FFFFFF'>
+			<%= yield %>
+		</div>
+		<div id="pie" style='background-color: #FFF9B3;'>
+			WebSite desarrollado por Betty Párraga y Jorge Cruz
+		</div>
+	</div>
 </body>
 </html>

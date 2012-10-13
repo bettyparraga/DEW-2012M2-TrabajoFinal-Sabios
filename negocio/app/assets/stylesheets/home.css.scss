@@ -1,0 +1,60 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//a:link {color:#A69B26;}      /* unvisited link */
+//a:visited {color:#ffffff;}  /* visited link */
+//a:hover {color:#815AB3;}  /* mouse over link */
+//a:active {color:#FFF375;}  /* selected link */ 
+
+body{ 
+	text-align: center;
+	background-color: #E6E6E6;
+	}
+
+#contenido{
+			width: 693px;
+			margin: 0 auto 0 auto;
+			text-align: left;
+			}
+
+#cabecera{
+			margin-bottom: 10px;
+			width: 693px;
+			text-align:center;
+			height:100%;
+			color:#1B7550;
+		}
+
+#logo{ 
+		float:left;
+		width:500px;
+		font-size:50px;
+		height:100%;
+	}
+
+#login{
+		float:left;
+		width:180px;
+		font-size:13px;
+		height:100%px;
+		color:#ffffff;
+	}
+
+
+#info{
+		width: 693px;
+		float: left;
+		margin-bottom: 50px;
+		//margin:10px 15px 14px 30px;
+		background-color: #FFFFFF;
+//		text-align: center;
+	}
+#pie{
+		width: 693px;
+		bottom:0;
+		position:fixed;
+		text-align:center;
+		color:#A69B26;
+	}

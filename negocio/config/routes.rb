@@ -1,5 +1,7 @@
 Negocio::Application.routes.draw do
  
+  devise_for :users
+
   resources :bancos
 
   resources :cuenta_bancaria
@@ -7,13 +9,13 @@ Negocio::Application.routes.draw do
   resources :emprendedors
 
   resources :sabios
-  root :to => "sabios#index"
+  root :to => "home#index"
 
   resources :plans
 
   resources :categories
-
- 
+  devise_for :users
+  resources :dashboard
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
