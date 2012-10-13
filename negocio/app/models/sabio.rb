@@ -1,7 +1,4 @@
 class Sabio < ActiveRecord::Base
-  belongs_to :sabio
-  belongs_to :category
-
   validates_presence_of :nombres, :message => "^Debe ingresar nombre"
   validates_presence_of :paterno, :message => "^Debe ingresar el Apellido Paterno "
   validates_presence_of :materno, :message => "^Debe ingresar el Apellido Materno"
