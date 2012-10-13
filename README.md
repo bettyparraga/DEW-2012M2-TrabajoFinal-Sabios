@@ -6,18 +6,19 @@
 
 Trabajo Final 
 
+Bitácora BettyParraga
+https://docs.google.com/document/d/1prl98JgTC9EK4Ck7UiKVe38X1BUEQrUvzcWdK5uZoUw/edit
+
+
+Bosquejo de tablas del proyecto
+https://docs.google.com/presentation/d/1wEz5g5892smomUFaASfLrzd_ftl8efrhK6Lv2ZIjAGs/edit
+
+
+
 Dirección Web de Scrumy 
-
-
-
 http://scrumy.com/dies70coloring
 
 
-
-
-Bitácora de Edgar Olivera
-
-https://docs.google.com/document/d/1cOa3DcoUyjaVvEeExEoCj5sVYQSbe42a_p9zz0LtLkI/edit
 
 
 
