@@ -17,7 +17,7 @@
 
 <% @plans.each do |plan| %>
   <tr>
-    <td><%= plan.sabio.name %></td>
+    
     <td><%= plan.title %></td>
     <td><%= plan.category.name %></td>
     <td><%= plan.time_month %></td>
@@ -30,8 +30,22 @@
     <td><%= link_to 'Destroy', plan, confirm: '¿Estás seguro?', method: :delete %></td>
   </tr>
 <% end %>
+<br />
+
+ <%= form_for @search do |f| %>   
+ <p>   
+<%= f.label :title_contains %>   
+<%= f.text_field :title_contains%>   
+</p>  
+
+
+
+
+<p class="button"><%= f.submit "Search" %> </p>
+<% end %> 
+<br />
 </table>
 
-<br />
+
 
 <%= link_to 'Nuevo Plan de Negocio', new_plan_path %>

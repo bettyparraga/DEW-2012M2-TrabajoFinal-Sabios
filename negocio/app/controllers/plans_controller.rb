@@ -2,7 +2,8 @@ class PlansController < ApplicationController
   # GET /plans
   # GET /plans.json
   def index
-    @plans = Plan.all
+    @search = Plan.search(params[:search])   
+    @plans = @search.all 
 
     respond_to do |format|
       format.html # index.html.erb

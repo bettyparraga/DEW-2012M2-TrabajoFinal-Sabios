@@ -8,6 +8,7 @@ gem 'rails', '3.1.1'
 gem 'sqlite3'
 gem "custom_error_message", "~> 1.1.1"
 gem 'devise'
+gem 'meta_search'
 
 # Gems used only for assets and not required
 # in production environments by default.
