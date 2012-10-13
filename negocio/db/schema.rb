@@ -60,5 +60,23 @@ ActiveRecord::Schema.define(:version => 20121013044342) do
   add_index "plans", ["category_id"], :name => "index_plans_on_category_id"
   add_index "plans", ["sabio_id"], :name => "index_plans_on_sabio_id"
 
-  
+  create_table "sabios", :force => true do |t|
+    t.string   "nombres"
+    t.string   "paterno"
+    t.string   "materno"
+    t.string   "tipo_docum_identidad"
+    t.string   "celular"
+    t.string   "direccion"
+    t.date     "fecha_nacimiento"
+    t.string   "apelativo"
+    t.text     "resumen_biografico"
+    t.string   "sitio_web"
+    t.string   "banco_cta_bancaria"
+    t.string   "numero_cta_bancaria"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "numero_documento"
+    t.string   "sexo"
+  end
+
 end

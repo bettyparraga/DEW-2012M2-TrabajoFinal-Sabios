@@ -1,0 +1,16 @@
+class Sabio < ActiveRecord::Base
+  validates_presence_of :nombres, :message => "^Debe ingresar nombre"
+  validates_presence_of :paterno, :message => "^Debe ingresar el Apellido Paterno "
+  validates_presence_of :materno, :message => "^Debe ingresar el Apellido Materno"
+  validates_presence_of :sexo, :message => "^Debe ingresar el sexo "
+  validates_presence_of :tipo_docum_identidad,  :message => "^Debe seleccionar un tipo"
+  validates_presence_of :celular, :message => "^Debe ingresar un numero celular"
+  validates_presence_of :direccion, :message => "^Debe ingresar una direccion"
+  validates_presence_of :fecha_nacimiento, :message => "^Debe ingresar la fecha de nacimiento"
+  validates_presence_of :numero_documento, :message => "^Debe ingresar un numero de documento de identidad"
+  validates_presence_of :apelativo, :message => "^Debe ingresar un apelativo"
+  validates_presence_of :resumen_biografico, :message => "^Debe ingresar resumen bigrafico"
+  validates_presence_of :sitio_web,  :message => "^Debe ingresar un sitio_web"
+  validates_presence_of :banco_cta_bancaria, :message => "^Debe ingresar el nombre del Banco"
+  validates_presence_of :numero_cta_bancaria, :message => "^Debe ingresar el numero de la cuenta bancaria"
+end
