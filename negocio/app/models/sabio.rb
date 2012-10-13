@@ -14,4 +14,5 @@ class Sabio < ActiveRecord::Base
   validates_presence_of :banco_cta_bancaria, :message => "^Debe ingresar el nombre del Banco"
   validates_presence_of :numero_cta_bancaria, :message => "^Debe ingresar el numero de la cuenta bancaria"
   validates_uniqueness_of :numero_documento, :message => "^ Numero de documento ya existe"
+
 end
